@@ -3,6 +3,7 @@ const app = express()
 let cors = require("cors");
 let bodyParser = require("body-parser");
 const port = process.env.PORT || 4000;
+const indexRouter = require('../routes')
 
 app.use(bodyParser.json());
 app.use(
@@ -29,7 +30,7 @@ app.use(function (err, req, res, next) {
 
  
 
-// app.use('/',indexRouter)
+app.use('/',indexRouter)
 
  
 
